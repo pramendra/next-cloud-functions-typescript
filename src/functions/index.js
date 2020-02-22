@@ -5,6 +5,9 @@ var dev = process.env.NODE_ENV !== 'production'
 var app = next({
   dev,
   conf: { distDir: `dist/next` },
+//   publicRuntimeConfig: {
+//     staticFolder: '/public/',
+//   },
 })
 var handle = app.getRequestHandler()
 
