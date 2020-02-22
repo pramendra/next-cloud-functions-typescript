@@ -40,9 +40,15 @@ npm i -D eslint eslint-config-react-app @typescript-eslint/eslint-plugin@^2.17.0
 npm i -D prettier --exact
 ```
 
-[ ] Setup jest
+[x] Setup jest
 
 ```bash
 npm i -D jest ts-jest @types/jest
 npx ts-jest config:init
+```
+
+[x] Setup express serveer for apis
+
+```bash
+npm i express
 ```

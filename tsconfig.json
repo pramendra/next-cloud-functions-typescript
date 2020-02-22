@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "target": "es6",
+    "module": "commonjs",
+    "rootDir": "./",
+    "outDir": "./dist",
+    "noImplicitAny": true,
+    "strictNullChecks": true,
+    "sourceMap": true
+  },
+  "include": [
+    "src/server/**/*.ts",
+    "src/functions/**/*.ts",
+    "src/config/**/*.ts"
+  ],
+  "exclude": ["node_modeles"]
+}
