@@ -1,0 +1,36 @@
+{
+  "name": "linc-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "next src/app",
+    "clean": "rimraf dist",
+    "build:app": "next build src/app",
+    "build:functions": "cpx \"src/functions/**/*.*\" dist",
+    "copy:static": "cpx \"src/app/static/**/*.*\" dist/public/static",
+    "copy:next": "cpx \"dist/next/static/**/*.*\" dist/public/_next/static",
+    "copy:deps": "cpx \"*{package.json,package-lock.json}\" dist",
+    "copy:pages": "cpx \"dist/next/serverless/pages/**/*.*\" dist/pages",
+    "build": "cross-env NODE_ENV=production run-s clean build:app build:functions copy:static copy:next copy:deps copy:pages",
+    "emulate": "cross-env NODE_ENV=production functions-framework --target=next --source=./dist --port=3000",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "firebase-admin": "^8.9.2",
+    "firebase-functions": "^3.3.0",
+    "next": "^9.2.2",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0"
+  },
+  "devDependencies": {
+    "@google-cloud/functions-framework": "^1.4.0",
+    "cpx": "^1.5.0",
+    "cross-env": "^7.0.0",
+    "npm-run-all": "^4.1.5",
+    "rimraf": "^3.0.2"
+  }
+}
