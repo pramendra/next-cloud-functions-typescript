@@ -16,7 +16,10 @@
     "emulate": "cross-env NODE_ENV=production functions-framework --target=next --source=./dist --port=3000",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": ["nextjs", "google functions"],
+  "keywords": [
+    "nextjs",
+    "google functions"
+  ],
   "author": "Pramendra Gupta <pramendra@mercari.com>",
   "license": "ISC",
   "dependencies": {
@@ -28,9 +31,12 @@
   },
   "devDependencies": {
     "@google-cloud/functions-framework": "^1.4.0",
+    "@types/node": "^13.7.4",
+    "@types/react": "^16.9.22",
     "cpx": "^1.5.0",
     "cross-env": "^7.0.0",
     "npm-run-all": "^4.1.5",
-    "rimraf": "^3.0.2"
+    "rimraf": "^3.0.2",
+    "typescript": "^3.8.2"
   }
 }
