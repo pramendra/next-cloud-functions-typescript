@@ -1,11 +1,10 @@
 const next = require('next');
 import { getServer } from './../server/server';
 const functions = require('firebase-functions');
-const dev = process.env.NODE_ENV !== 'production';
 
 const app = next({
-  dev,
-  conf: { distDir: `dist/next` },
+  dev: false,
+  conf: { distDir: 'next' },
   publicRuntimeConfig: {
     staticFolder: '/public/'
   }
