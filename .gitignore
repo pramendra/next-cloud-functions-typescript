@@ -3,3 +3,5 @@
 .firebaserc
 node_modules
 dist
+env*.yaml
+!env.example.yaml
